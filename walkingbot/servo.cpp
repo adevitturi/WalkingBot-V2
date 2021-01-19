@@ -32,22 +32,22 @@ void Servo::loop() {
 }
 
 void Servo::do_loop() {
-	int diff_pos = pos_setpoint_ - pos_;
-	if (diff_pos == 0) {
+	int error_pos = pos_setpoint_ - pos_;
+	if (error_pos == 0) {
 		return;
 	}
 
-	int updating_ramp_speed;
-	if (abs(diff_pos) >= ramp_speed_) {
-		updating_ramp_speed = ramp_speed_;
+	int raamp_ratio;
+	if (abs(error_pos) >= ramp_speed_) {
+		raamp_ratio = ramp_speed_;
 	} else {
-		updating_ramp_speed = ramp_speed_ - abs(diff_pos);
+		raamp_ratio = abs(error_pos);
 	}
 
-	if (diff_pos > 0) {
-		set_pos_instant(pos_ + updating_ramp_speed);
+	if (error_pos > 0) {
+		set_pos_instant(pos_ + raamp_ratio);
 	} else {
-		set_pos_instant(pos_ - updating_ramp_speed);
+		set_pos_instant(pos_ - raamp_ratio);
 	}
 }
 

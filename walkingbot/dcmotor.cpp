@@ -5,6 +5,7 @@ namespace L298N{
 static const unsigned long LOOP_INTERVAL = 100;
 static const int MAX_SPEED = 100;
 static const int MIN_SPEED = 10;
+static const int PWM_FREQ = 10000;
 
 DcMotors::DcMotors(int pin_en_a, int pin_en_b, int pin_dir1, int pin_dir2, int pin_dir3, int pin_dir4) {
 	pin_en_a_ = pin_en_a;
@@ -21,7 +22,7 @@ DcMotors::DcMotors(int pin_en_a, int pin_en_b, int pin_dir1, int pin_dir2, int p
   pinMode(pin_dir4_, OUTPUT);
 
   analogWriteRange(MAX_SPEED);
-  analogWriteFreq(3000);
+  analogWriteFreq(PWM_FREQ);
 }
 
 void DcMotors::loop() {
@@ -37,52 +38,30 @@ void DcMotors::do_loop() {
 }
 
 void DcMotors::update_speed() {
-	update_left_speed();
-	update_right_speed();
-} 
-
-void DcMotors::update_left_speed() {
-	int diff_left_speed = left_speed_setpoint_ - left_speed_;
-	if (diff_left_speed == 0) {
-		return;
-	}
-
-	int updating_ramp_speed;
-	if (abs(diff_left_speed) >= ramp_speed_) {
-		updating_ramp_speed = ramp_speed_;
-	} else {
-		updating_ramp_speed = ramp_speed_ - abs(diff_left_speed);
-	}
-
-	if (diff_left_speed > 0) {
-		set_left_speed_instant(left_speed_ + updating_ramp_speed);
-	} else {
-		set_left_speed_instant(left_speed_ - updating_ramp_speed);
-	}
-	
+	set_left_speed_instant(left_speed_ + compute_speed_ramp_ratio(left_speed_setpoint_, left_speed_));
+	set_right_speed_instant(right_speed_ + compute_speed_ramp_ratio(right_speed_setpoint_, right_speed_));
 }
 
-void DcMotors::update_right_speed() {
-	int diff_right_speed = right_speed_setpoint_ - right_speed_;
-	if (diff_right_speed == 0) {
-		return;
+int DcMotors::compute_speed_ramp_ratio(int speed_setpoint, int current_speed) {
+	int speed_error = speed_setpoint - current_speed;
+	if (speed_error == 0) {
+		return speed_error;
 	}
 
-	int updating_ramp_speed;
-	if (abs(diff_right_speed) >= ramp_speed_) {
-		updating_ramp_speed = ramp_speed_;
+	int ramp_ratio;
+	if (abs(speed_error) >= ramp_speed_) {
+		ramp_ratio = ramp_speed_;
 	} else {
-		updating_ramp_speed = ramp_speed_ - abs(diff_right_speed);
+		ramp_ratio = abs(speed_error);
 	}
-
-	if (diff_right_speed > 0) {
-		set_right_speed_instant(right_speed_ + updating_ramp_speed);
-	} else {
-		set_right_speed_instant(right_speed_ - updating_ramp_speed);
-	}	
+	if (speed_error > 0) {
+		return ramp_ratio;
+	} else  {
+		return ramp_ratio * (-1); 
+	}
 }
- 
-void DcMotors::set_right_speed(int speed) {
+
+int DcMotors::compute_speed_setpoint(int speed) {
 	if (abs(speed) > MAX_SPEED) {
 		if (speed >= 0) {
 			speed = MAX_SPEED;
@@ -93,21 +72,7 @@ void DcMotors::set_right_speed(int speed) {
 	if (abs(speed) < MIN_SPEED) {
 		speed = 0;
 	}
-	right_speed_setpoint_ = speed;
-}
-
-void DcMotors::set_left_speed(int speed) {
-	if (abs(speed) > MAX_SPEED) {
-		if (speed >= 0) {
-			speed = MAX_SPEED;
-		} else {
-			speed = -1 * MAX_SPEED;
-		}
-	}
-	if (abs(speed) < MIN_SPEED) {
-		speed = 0;
-	}
-	left_speed_setpoint_ = speed;
+	return speed;	
 }
 
 int DcMotors::get_right_speed() {
@@ -171,8 +136,8 @@ void DcMotors::set_left_speed_instant(int speed) {
 // Vl : left wheel speed (tangent to the ground)
 
 void DcMotors::set_diff_drive_speed(int linear, int angular) {
-	set_right_speed(linear + angular);
-	set_left_speed(linear - angular);
+	right_speed_setpoint_ = compute_speed_setpoint(linear + angular);
+	left_speed_setpoint_ = compute_speed_setpoint(linear - angular);
 }
 
 } // namespace L298N
