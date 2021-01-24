@@ -146,7 +146,6 @@ void loop() {
   current_time = millis();
   if (current_time - last_loop_time > 100) {
     dtostrf(hc.dist(), 10, 2, ultrasound_buff);
-    Serial.println(ultrasound_buff);
     client.publish("ultrasound", ultrasound_buff);
     last_loop_time = current_time;
   }

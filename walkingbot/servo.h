@@ -15,7 +15,7 @@ class Servo {
 		void set_pos_instant(int pos);
 		int pin_signal_ = 0;
 		int pos_setpoint_ = 0;
-		int pos_ = 0;
+		int pos_ = 50;
 		int ramp_speed_ = 1;
 		unsigned long last_loop_time_ = 0;
 };

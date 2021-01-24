@@ -5,7 +5,7 @@ namespace L298N{
 static const unsigned long LOOP_INTERVAL = 100;
 static const int MAX_SPEED = 100;
 static const int MIN_SPEED = 10;
-static const int PWM_FREQ = 10000;
+static const int PWM_FREQ = 100;
 
 DcMotors::DcMotors(int pin_en_a, int pin_en_b, int pin_dir1, int pin_dir2, int pin_dir3, int pin_dir4) {
 	pin_en_a_ = pin_en_a;
