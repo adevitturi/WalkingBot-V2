@@ -30,7 +30,7 @@ The hardware for this robot consists of:
  To see the BOM and assembly instructions [click here!](docs/assembly.md)
  
  ## Software
- The robot can be controlled throw Wi-Fi using MQTT messages. For this project we see how to control it with a joystick on an Android App called [Remote XY](12).
+ The robot can be controlled throw Wi-Fi using MQTT messages. For this project we see how to control it with a joystick on an Android App called [Remote XY][12].
  
  The software in this repository includes:
   - Firmware: Arduino sketch for the NodeMCU board.
