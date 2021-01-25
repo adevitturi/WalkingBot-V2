@@ -30,7 +30,8 @@ The hardware for this robot consists of:
  To see the BOM and assembly instructions [click here!](docs/assembly.md)
  
  ## Software
- The robot can be controlled throw Wi-Fi using MQTT messages. For this project we see how to control it with a joystick on an Android App called Remote XY.
+ The robot can be controlled throw Wi-Fi using MQTT messages. For this project we see how to control it with a joystick on an Android App called [Remote XY](12).
+ 
  The software in this repository includes:
   - Firmware: Arduino sketch for the NodeMCU board.
   - Node-RED flow: a server in charge of communicating the joystick in the phone with the robot.
@@ -52,4 +53,4 @@ The hardware for this robot consists of:
 [9]: https://www.amazon.com/AutoEC-4pcs-Motor-Smart-Robot/dp/B00U4HP0SQ/ref=sr_1_39?dchild=1&keywords=arduino+dc+motor&qid=1611461562&sr=8-39
 [10]: https://www.amazon.com/SunFounder-Digital-Helicopter-Airplane-Controls/dp/B01M5LIKLQ/ref=sr_1_18?dchild=1&keywords=tower+pro+sg90&qid=1611461723&sr=8-18 "Servo"
 [11]:https://www.amazon.com/-/es/10-pares-Connector-Battery-discharge-alambre/dp/B01JUDP5NY/ref=sr_1_17?__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=battery+connector&qid=1611615490&sr=8-17 "Battery connector"
-
+[12]:https://play.google.com/store/apps/details?id=com.shevauto.remotexy.free&hl=es&gl=US
