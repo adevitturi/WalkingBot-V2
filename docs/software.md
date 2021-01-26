@@ -1,7 +1,8 @@
 ## Arduino firmware
-First you need to install Arduino IDE. you can see an installation guide [here][1]
+First you need to install Arduino IDE. you can see an installation guide [here][1].
+
 Download the arduino sketch from [firmware/walkingbot](../firmware/walkingbot).
-To upload an arduino sketch to the NodeMcu board you can follow [this guide][2]
+To upload an arduino sketch to the NodeMcu board you can follow [this guide][2].
 
 The firmware on the NodeMcu subscribes to an MQTT topic `diff_speed` to get the linear and angular speed commands in a range from 0 to 100 to command the motors that drive the leags on each side of the robot.
 It also subscribes to the topic `head_dir` that commands the movement of the head. Note that the current model of the head doesn't have a really wide angle of movement. This will be tackled in future versions no make for a wider vision angle.
@@ -9,7 +10,9 @@ The firmware also publishes constantly the readings from the ultrasound sensor t
 
 ## Node-RED
 You will require to install Node-RED in your pc. You can see an installation guide [here][3].
+
 You will also need to install a MQTT broker. You can use Eclipse Mosquitto, which is an open-source MQTT message broker. You can see an installation guide [here][4].
+
 Once you have node-RED running, download the Node-RED flow from [nodered/robot-control.json](../nodered/robot-control.json) and import it in your browser.
 Then you can make sure that all nodes are set up properly and then click the 'Deploy' button.
 
