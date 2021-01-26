@@ -14,7 +14,7 @@ You will require to install Node-RED in your pc. You can see an installation gui
 You will also need to install and run a MQTT broker. You can use Eclipse Mosquitto, which is an open-source MQTT message broker. You can see an installation guide [here][4].
 
 Once you have node-RED running, download the Node-RED flow from [nodered/robot-control.json](../nodered/robot-control.json) and import it in your browser.
-Then you can make sure that all nodes are set up properly and then click the 'Deploy' button.
+Then you can make sure that all nodes are set up properly and finally click the 'Deploy' button.
 
 ## Android Remote XY
 You can download the [Remote XY][5] app to your Android device.
