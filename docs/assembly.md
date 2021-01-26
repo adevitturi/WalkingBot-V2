@@ -77,7 +77,7 @@ Finally you can attach the battery-holder 3D printed part to your real 18650 bat
 <img width=500px src="../images/assembly/chasis3.PNG">
 
 ## Full assembly
-For the rest of the assembly you will need parts that can be found under [parts/STL/body](parts/STL/body) and [parts/STL/gears](parts/STL/gears).
+For the rest of the assembly you will need parts that can be found under [parts/STL/body](../parts/STL/body) and [parts/STL/gears](../parts/STL/gears).
 You will need:
 
 |Parts                            | Quantity | 
