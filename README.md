@@ -22,6 +22,7 @@ The following table lists the BOM:
 | [SG90 Servo 180 degrees][10] |    1 	   |
 | M3x25 bolts                  |    4 	   |
 | M3x12 bolts                  |    2 	   |
+| M3 nuts                      |    4 	   |
  
  To see the circuit diagram [click here!](docs/circuit_diagram.md)
  
