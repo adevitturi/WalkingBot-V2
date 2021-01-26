@@ -53,5 +53,42 @@ Finally, attach toe1 (the longer one) to bone4 and toe2 (the short one) to bone3
 <img width=500px src="../images/assembly/leg12.PNG">
 
 ## Body Assembly
+For the body you need to print 3 parts, located under [parts/STL/body](parts/STL/body). You will also need 2 DC motors, 1 Servo and some bolts and nuts.
+|Parts                       | Quantity | 
+|----------------------------|----------|
+| chasis                     |    1     |
+| battery-holder             |    1     |
+| battery-holder-robot       |    1     |
+| M3x25 bolts                |    4     |
+| M3 nuts                    |    4     |
+| DC motors                  |    2     |
+| Sg90 Servo                 |    1     |
+
+First place the DC motors inside the chasis. You will notice that in the inside between them you can place 2 M3 nuts (can be optional if the bolts fit correctly on your print).
+Then proceed to screw the M3x25 bolts to fasten the motors to the chasis.
+Now you can put the battery-holder-robot part in the middle of the motors. Note that this part also has space for 2 M3 nuts. Proceed to fasten this part to the motors with the other 2 M3x25 bolts.
+Then you can place the Servo with its shaft going through the chasis and fasten it with its set of screws (normally sold as misc with the servo).
+
+<img width=500px src="../images/assembly/chasis1.PNG">
+<img width=500px src="../images/assembly/chasis2.PNG">
+
+Finally you can attach the battery-holder 3D printed part to your real 18650 battery holder (you can glue it or drill two M3 holes to the holder to fasten it to the printed part with 2 extra M3 bolts). Note that the battery-holder part slides inside the battery-holder-robot part. That way the robot can lift the batteries and at the same time they are easy to remove.
+
+<img width=500px src="../images/assembly/chasis3.PNG">
+
+## Full assembly
+For the rest of the assembly you will need parts that can be found under [parts/STL/body](parts/STL/body) and [parts/STL/gears](parts/STL/gears).
+You will need:
+
+|Parts                            | Quantity | 
+|---------------------------------|----------|
+| assembled legs                  |    4     |
+| assembled mirrored legs         |    4     |
+| body assembled in previous step |    1     |
+| big-gear                        |    4     |
+| small-gear                      |    2     |
+| gear-holder                     |    4     |
+| gear1-shaft                     |    2     |
+| gear2-shaft                     |    4     |
 
 [1]: https://www.youtube.com/watch?v=RxB7USuMwRw&feature=youtu.be
