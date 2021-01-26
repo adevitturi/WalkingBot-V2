@@ -7,18 +7,21 @@ I think my strongest motivation for building walking mechanisms arised after dis
 After doing some further research on the topic, I found some other mechanimsms with different walking profiles. The one that caught my attention the most was the [trotbot][2], so I based my design on it, adding just some small modifications to the linkage structure.
 
 ## Hardware
-The hardware for this robot consists of:
- - 1x [NodeMCU board][3]
- - 1x [L298 N H-Bridge driver][4]
- - 1x [18650 battery holder][5] for 2 units
- - 2x [18650 batteries][6]
- - 1x [BMS 2S battery charger][7]
- - 2x [cables and connectors][11]
- - 1x [ultrasound sensor][8]
- - 2x [dc motors with gearbox][9]
- - 1x [SG90 Servo 180 degrees][10]
- - 4x M3x25 bolts
- - 2x M3x12 bolts
+The following table lists the BOM:
+
+|Parts                         | Quantity | 
+|------------------------------|----------|
+| [NodeMCU board][3]           |    1     |
+| [L298 N H-Bridge driver][4]  |    1     |
+| [18650 battery holder][5]    |    1     |
+| [18650 batteries][6]         |    2     |
+| [BMS 2S battery charger][7]  |    1     |
+| [cables and connectors][11]  |    2     |
+| [ultrasound sensor][8]       |    1     |
+| [dc motors with gearbox][9]  |    2     |
+| [SG90 Servo 180 degrees][10] |    1 	   |
+| M3x25 bolts                  |    4 	   |
+| M3x12 bolts                  |    2 	   |
  
  To see the circuit diagram [click here!](docs/circuit_diagram.md)
  
@@ -27,7 +30,7 @@ The hardware for this robot consists of:
  
  The parts were designed using Autodesk Inventor. CAD files and full assemblies can be found under [parts/CAD](parts/CAD).
  
- To see the BOM and assembly instructions [click here!](docs/assembly.md)
+ To see the assembly instructions [click here!](docs/assembly.md)
  
  ## Software
  The robot can be controlled throw Wi-Fi using MQTT messages. For this project we see how to control it with a joystick on an Android App called [Remote XY][12].
