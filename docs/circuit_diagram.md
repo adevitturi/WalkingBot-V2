@@ -9,7 +9,7 @@ In the following picture you can see an example board with some extra header pin
 
 <img width=800px src="../images/circuit/nodemcu_board.jpg">
 
-You will notice that to make the connections in the robot head there is a whole where you can connect some duppont cables.
+You will notice that to make the connections in the robot head there is a hole where you can connect some duppont cables.
 
 <img width=800px src="../images/circuit/head_wiring.jpg">
 
