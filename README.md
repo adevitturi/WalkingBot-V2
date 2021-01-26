@@ -2,6 +2,9 @@
 WalkingBot-V2 is an open source 3D printed robot that walks!
 This repository contains all the software, 3D models and BOM to make the full assembly.
 
+<img src="images/robot/IMG_20200923_120845.jpg" style="width:50%">
+<img src="images/robot/IMG_20200923_120640.jpg" style="width:50%">
+
 ## About
 I think my strongest motivation for building walking mechanisms arised after discovering the marvelous [strandbeests by Theo Jansen][1].
 After doing some further research on the topic, I found some other mechanimsms with different walking profiles. The one that caught my attention the most was the [trotbot][2], so I based my design on it, adding just some small modifications to the linkage structure.
