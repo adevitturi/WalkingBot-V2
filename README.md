@@ -44,6 +44,13 @@ The following table lists the BOM:
   - Node-RED flow: a server in charge of communicating the joystick in the phone with the robot.
 
  To see a guide for setting up the software [click here!](docs/software.md)
+ 
+ ## Videos
+ https://youtu.be/vDro2LflieM
+
+ https://youtu.be/8G8XOwB4iCY
+
+ https://youtu.be/JpEi38m9lwI
   
  ## Authors
 
