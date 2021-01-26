@@ -11,7 +11,7 @@ The firmware also publishes constantly the readings from the ultrasound sensor t
 ## Node-RED
 You will require to install Node-RED in your pc. You can see an installation guide [here][3].
 
-You will also need to install a MQTT broker. You can use Eclipse Mosquitto, which is an open-source MQTT message broker. You can see an installation guide [here][4].
+You will also need to install and run a MQTT broker. You can use Eclipse Mosquitto, which is an open-source MQTT message broker. You can see an installation guide [here][4].
 
 Once you have node-RED running, download the Node-RED flow from [nodered/robot-control.json](../nodered/robot-control.json) and import it in your browser.
 Then you can make sure that all nodes are set up properly and then click the 'Deploy' button.
