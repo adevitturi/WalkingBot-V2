@@ -20,5 +20,32 @@ The following table describes the parts required to assembe a single leg. These 
 
 To assemle a single mirrored leg, the files are the same, but have the suffix `_MIR`. These parts can be found under [parts/STL/leg_mirrored](parts/STL/leg_mirrored).
 
-To assemble the different sections of each leg, you can use a piece of filament and a soldering iron (or any other hot material) to melt the sides of the filament.
-<img width=500px src="images/assembly_smps.png" alt="Project logo"></a>
+To assemble the different sections of each leg, you can use a piece of filament and a soldering iron (or a lighter) to melt the sides of the filament. You can see an example [here][1].
+
+First, join base-bone with bone6 and bone7.
+<img width=500px src="images/assembly/leg1.PNG">
+<img width=500px src="images/assembly/leg2.PNG">
+
+Then add bone1 and bone 2 to the other side of base-bone.
+<img width=500px src="images/assembly/leg3.PNG">
+<img width=500px src="images/assembly/leg4.PNG">
+
+Then join bone4 with bone1 and proceed to attach bone3 to bone1 and bone2.
+<img width=500px src="images/assembly/leg5.PNG">
+<img width=500px src="images/assembly/leg6.PNG">
+
+Next join bone4 and bone7 with bone5.
+<img width=500px src="images/assembly/leg7.PNG">
+<img width=500px src="images/assembly/leg8.PNG">
+
+Now join bone5 and base-bone with bone0.
+<img width=500px src="images/assembly/leg9.PNG">
+<img width=500px src="images/assembly/leg10.PNG">
+
+Finally, attach toe1 (the longer one) to bone4 and toe2 (the short one) to bone3.
+<img width=500px src="images/assembly/leg11.PNG">
+<img width=500px src="images/assembly/leg12.PNG">
+
+## Body Assembly
+
+[1]: https://www.youtube.com/watch?v=RxB7USuMwRw&feature=youtu.be
